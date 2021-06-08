@@ -12,7 +12,6 @@ function App() {
   return (
       <Router>
           <Provider store={store}>
-
      <Header/>
      <div className='container mt-5'>
          <Switch>
@@ -22,7 +21,6 @@ function App() {
          </Switch>
      </div>
      </Provider>
-
       </Router>
   );
 }
