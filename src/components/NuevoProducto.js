@@ -1,6 +1,12 @@
 import React from 'react';
 
-const NuevoProducto = () => {
+//Actions de Redux
+import {connect} from 'react-redux'
+import { crearNuevoProductoAction } from '../actions/productosActions';
+import {obtenerListApiAction} from '../actions/productosActions'
+
+const NuevoProducto = (props) => {
+    const {obtenerListApiAction} = props;
     return (
         <div className="row justify-content-center">
             <div className="col-md-8">
@@ -29,6 +35,7 @@ const NuevoProducto = () => {
                                 />
                             </div>
                             <button
+                                onClick={obtenerListApiAction()}
                                 type='submit'
                                 className='btn btn-primary font-weight-bold text-uppercase mt-4 d-block w-100'>
                                 Agregar
@@ -42,5 +49,14 @@ const NuevoProducto = () => {
         </div>
     )
 }
+const mapDispatchToProps = dispatch => {
+    return {
+      obtenerListApiAction : () => dispatch(obtenerListApiAction())
+    }
+  }
 
-export default NuevoProducto;
+
+  export default connect(
+    null,
+    mapDispatchToProps
+  )(NuevoProducto);
