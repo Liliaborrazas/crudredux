@@ -15,13 +15,13 @@ const initialState = {
 
 export default function (state = initialState, action){
     switch(action.type){
-        case 'LISTA_API':
+        case LISTA_API:
             return {
                 ...state,
                 productos: action.payload
             }
             default:
-                 return state
+                 return state;
 
     }
 }

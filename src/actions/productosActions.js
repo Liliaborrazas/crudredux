@@ -8,11 +8,11 @@ import axios from 'axios'
 
 //Crear nuevos productos
 
-export function crearNuevoProductoAction () {
-    return () => {
-        console.log('desde action')
-    }
-}
+// export function crearNuevoProductoAction () {
+//     return () => {
+//         console.log('desde action')
+//     }
+// }
 
 //Actions
 //Las acciones van a consumir la api por ejemplo.Esta lista de datos se le pasa al reducer
@@ -25,7 +25,7 @@ export function crearNuevoProductoAction () {
 export const obtenerListApiAction = ()=> async(dispatch, getState)=>{
     try{
         const res = await axios.get(`https://fakestoreapi.com/products`)
-        console.log(res.data)
+        // console.log(res.data)
         dispatch({
             type:LISTA_API,
             payload: res.data
@@ -37,5 +37,5 @@ export const obtenerListApiAction = ()=> async(dispatch, getState)=>{
     
     }
     
-    ///Nosoros hacemos acciones, esas acciones se procesan en e reducer con los casos, que podemos tener varios
+    ///Nosoros hacemos acciones, esas acciones se procesan en el reducer con los casos, que podemos tener varios
     //y eso va a retornar una accion que va a modificar nuestro estado
