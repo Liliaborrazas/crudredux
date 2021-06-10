@@ -1,4 +1,5 @@
 import React ,{ useEffect } from 'react';
+import {Link} from 'react-router-dom'
 
 //Actions de Redux
 import {connect} from 'react-redux'
@@ -23,7 +24,8 @@ const CategoriasProducto = (props) => {
                             <div>{list.map(item=>{
                                 return(<>
                                     <div className="card-container">
-                                        <button className="btn btn-danger nuevo-post d-block d-md-inline-block">{item}</button> 
+                                    <Link to={"/productos/categoria/jewelery"}className="btn btn-danger nuevo-post d-block d-md-inline-block">
+                                        <button className="btn btn-danger nuevo-post d-block d-md-inline-block">{item}</button> </Link>
                                     </div>
                                     </>
                                 )

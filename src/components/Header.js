@@ -6,7 +6,6 @@ const Header = () => {
 <nav className="navbar navbar-expand-lg navbar-dark bg-primary justify-content-between">
     <div className="container">
         <h1>
-
         <Link to={'/'} className="text-light">Shoping List Lía</Link>
         </h1>
     </div>
