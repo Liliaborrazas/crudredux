@@ -1,21 +1,19 @@
 import { 
-    LISTA_API
+    CATEGORIAS_API
 } from '../types'
 
 //Cada reducer tiene su propio state
 
 const initialState = {
-    productos: [],
-    error: null,
-    loading: false
+    categorias: [],
 }
 
 export default function (state = initialState, action){
     switch(action.type){
-        case LISTA_API:
+        case CATEGORIAS_API:
             return {
                 ...state,
-                productos: action.payload
+                categorias: action.payload
             }
             default:
                  return state;
