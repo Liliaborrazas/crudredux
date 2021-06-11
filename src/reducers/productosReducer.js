@@ -6,8 +6,7 @@ import {
 
 const initialState = {
     productos: [],
-    error: null,
-    loading: false
+  
 }
 
 export default function (state = initialState, action){
@@ -16,6 +15,7 @@ export default function (state = initialState, action){
             return {
                 ...state,
                 productos: action.payload
+                // productos:[...state.productos, action.payload]
             }
             default:
                  return state;

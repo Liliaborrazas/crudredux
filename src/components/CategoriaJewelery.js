@@ -2,7 +2,8 @@ import React, {useEffect} from 'react';
 import {categoriaJeweleryActions} from '../actions/categoriaJeweleryActions'
 import {connect} from 'react-redux'
 
-const CategoriaJewelery = ({categoriaJeweleryActions, list}) => {
+const CategoriaJewelery = ({categoriaJeweleryActions, list, id}) => {
+    console.log(id)
     useEffect(()=>{
         categoriaJeweleryActions()
     },[])

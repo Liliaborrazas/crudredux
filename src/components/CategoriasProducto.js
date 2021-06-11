@@ -22,13 +22,45 @@ const CategoriasProducto = (props) => {
                             Categorias de busqueda:
                         </h2>
                             <div>{list.map(item=>{
-                                return(<>
-                                    <div className="card-container">
-                                    <Link to={"/productos/categoria/jewelery"}className="btn btn-danger nuevo-post d-block d-md-inline-block">
-                                        <button className="btn btn-danger nuevo-post d-block d-md-inline-block">{item}</button> </Link>
-                                    </div>
-                                    </>
-                                )
+                                if(item.includes('jewelery')){
+                                    return(<>
+                                        <div className="card-container">
+                                        <Link to={"/productos/categoria/jewelery"}className="btn btn-danger nuevo-post d-block d-md-inline-block">
+                                            <button className="btn btn-danger nuevo-post d-block d-md-inline-block" id={item}>{item}</button>
+                                             </Link>
+                                        </div>
+                                        </>
+                                    )
+                                }else if(item.includes('electronics')){
+                                    return(<>
+                                        <div className="card-container">
+                                        <Link to={"/productos/categoria/electronics"}className="btn btn-danger nuevo-post d-block d-md-inline-block">
+                                            <button className="btn btn-danger nuevo-post d-block d-md-inline-block" id={item}>{item}</button>
+                                             </Link>
+                                        </div>
+                                        </>
+                                    )
+                                }else if(item.includes("men's clothing")){
+                                    return(<>
+                                        <div className="card-container">
+                                        <Link to={"/productos/categoria/men's clothing"}className="btn btn-danger nuevo-post d-block d-md-inline-block">
+                                            <button className="btn btn-danger nuevo-post d-block d-md-inline-block" id={item}>{item}</button>
+                                             </Link>
+                                        </div>
+                                        </>
+                                    )
+                                } else if(item.includes("women's clothing")){
+                                    return(<>
+                                        <div className="card-container">
+                                        <Link to={"/productos/categoria/women-clothing"}className="btn btn-danger nuevo-post d-block d-md-inline-block">
+                                            <button className="btn btn-danger nuevo-post d-block d-md-inline-block" id={item}>{item}</button>
+                                             </Link>
+                                        </div>
+                                        </>
+                                    )
+                                }
+                                //Hacer un if aquí, según la categoria pintar un link u otro
+                             
                             })}</div>
                     </div>
                 </div>
