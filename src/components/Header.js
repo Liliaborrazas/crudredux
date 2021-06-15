@@ -9,8 +9,7 @@ const Header = () => {
         <Link to={'/'} className="text-light">Shoping List Lía</Link>
         </h1>
     </div>
-    <Link to={"/productos/nuevo"}
-    className="btn btn-danger nuevo-post d-block d-md-inline-block">Categorias Productos</Link>
+  
 </nav>
     )
 }
